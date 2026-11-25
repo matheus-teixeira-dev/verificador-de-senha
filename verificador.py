@@ -1,8 +1,19 @@
 import getpass
 
-pontos = 5
+with open("senhas_fracas.txt", "r", encoding="utf-8") as file:
+ 
+    arquivo = file.read().splitlines()
+    print (arquivo)
+
+pontos = 6
 senha = getpass.getpass("Digite sua senha: ")
 print("Senha Recebida!")
+
+#Aqui os dois lados são convertidos para minusculo
+if senha.lower() in [a.lower() for a in arquivo]:
+    print("Sua senha foi encontrada em uma lista de senhas padrões")
+    pontos = pontos - 1
+
 
 if len(senha) < 8:
     print ("A senha não contem caracteres suficientes")
@@ -22,9 +33,9 @@ if not any (c.islower() for c in senha):
 
 if pontos < 3:
     print ("Sua senha está Fraca")
-elif pontos >=3 and pontos < 5 :
+elif pontos >=3 and pontos < 6 :
     print ("Sua senha está mediana")
-elif pontos == 5:
+elif pontos == 6:
     print ("Sua senha é forte Parabens!")
 
 ''' 
@@ -48,9 +59,9 @@ SE senha NÃO tem minuscula
 
 SE PONTOS MENOR QUE 3
     SUA SENHA É FRACA
-SE PONTOS MAIOR QUE 3 E MENOR QUE 5
+SE PONTOS MAIOR QUE ou igual a 3 E MENOR QUE 6
     SUA SENHA É MEDIANA
-SE PONTOS IGUAL 5
+SE PONTOS IGUAL 6
     SUA SENHA É FORTE 
 
 '''
