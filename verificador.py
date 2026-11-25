@@ -1,5 +1,8 @@
+import getpass
+
 pontos = 5
-senha = input("Digite sua senha: ")
+senha = getpass.getpass("Digite sua senha: ")
+print("Senha Recebida!")
 
 if len(senha) < 8:
     print ("A senha não contem caracteres suficientes")
@@ -43,11 +46,11 @@ SE senha NÃO tem minuscula
     SENHA PRECISA TER MINUSCULA
     PERDE PONTOS
 
-SE PONTOS MENOR QUE 30 
+SE PONTOS MENOR QUE 3
     SUA SENHA É FRACA
-SE PONTOS MAIOR QUE 30 E MENOR QUE 50
+SE PONTOS MAIOR QUE 3 E MENOR QUE 5
     SUA SENHA É MEDIANA
-SE PONTOS IGUAL 50
+SE PONTOS IGUAL 5
     SUA SENHA É FORTE 
 
 '''
