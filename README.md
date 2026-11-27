@@ -20,7 +20,10 @@ Software que verifica o quão forte uma senha é de acordo com parâmetros atrib
 - A senha contém caracteres em caixa alta?
 - A senha contém caracteres em caixa baixa?
 
+- Existe uma limitação na verificação: quando a senha contém duas ou mais senhas fracas em sua composição, o programa pode não identificar todas elas, reconhecendo apenas uma ou até mesmo nenhuma. Um exemplo é a senha `pedrorato`, em que o programa identifica apenas `pedro`, mas não reconhece `rato`.
+
 ## Pontuação
+
 
 - Para cada resposta negativa às perguntas acima, a senha perde pontos. São 5 perguntas no total, e cada pergunta vale 1 ponto.
 - **6 pontos:** Senha forte (cumpre todas as exigências).
