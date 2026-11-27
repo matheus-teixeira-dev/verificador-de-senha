@@ -56,4 +56,5 @@ A utilização de `len()` também foi interessante, pois permite calcular a quan
 
 Por fim, `if sobra < 5:` verifica se essa diferença é menor que 5. Caso seja, o programa exibe um aviso e desconta um ponto da pontuação da senha.
 
+- Hoje aprendi a utilizar os comandos `try` e `except`, que basicamente servem para o tratamento de erros. O `try` tenta executar determinado trecho de código e, caso ocorra algum erro, o `except` permite tratar essa exceção e executar outra ação. Achei muito útil, pois evita que o programa seja interrompido inesperadamente quando ocorre um erro.
 
